@@ -6,11 +6,23 @@ feature 'gerenciar funcao' do
 
   scenario 'incluir Funcao' do # , :javascript => true  do
 
-    visit new_funcaos_path
+    visit new_funcao_path
 
     preencher_e_verificar_funcao
 
     
+
+  end
+
+  scenario 'alterar funcao' do #, :javascript => true  do
+
+    funcao = FactoryGirl.create(:funcao)
+
+    visit edit_funcao_path(funcao)
+
+    preencher_e_verificar_funcao
+
+
 
   end
 

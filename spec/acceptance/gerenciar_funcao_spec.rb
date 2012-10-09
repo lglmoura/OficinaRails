@@ -14,6 +14,30 @@ feature 'gerenciar funcao' do
 
   end
 
+  scenario 'alterar funcao' do #, :javascript => true  do
+
+    funcao = FactoryGirl.create(:funcao)
+
+    visit edit_funcao_path(funcao)
+
+    preencher_e_verificar_funcao
+
+
+
+  end
+
+   scenario 'excluir curso' do #, :javascript => true  do
+
+       funcao = FactoryGirl.create(:funcao)
+
+        visit funcaos_path
+
+        click_link 'Excluir'
+
+    
+
+  end
+
    def preencher_e_verificar_funcao
 
       fill_in 'Nome',  :with => "eletricista"
