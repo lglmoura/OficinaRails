@@ -1,4 +1,6 @@
 Oficina::Application.routes.draw do
+  resources :funcaos
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
