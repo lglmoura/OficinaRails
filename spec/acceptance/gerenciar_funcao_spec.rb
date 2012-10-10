@@ -4,7 +4,7 @@ require 'spec_helper'
 
 feature 'gerenciar funcao' do
 
-  scenario 'incluir Funcao' do # , :javascript => true  do
+  scenario 'incluir Funcao' do # , :js => true  do
 
     visit new_funcao_path
 
@@ -14,7 +14,7 @@ feature 'gerenciar funcao' do
 
   end
 
-  scenario 'alterar funcao' do #, :javascript => true  do
+  scenario 'alterar funcao' do #, :js => true  do
 
     funcao = FactoryGirl.create(:funcao)
 

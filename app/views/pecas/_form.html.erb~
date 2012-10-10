@@ -1,0 +1,37 @@
+<%= form_for(@peca) do |f| %>
+  <% if @peca.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@peca.errors.count, "error") %> prohibited this peca from being saved:</h2>
+
+      <ul>
+      <% @peca.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :descricao %><br />
+    <%= f.text_field :descricao %>
+  </div>
+  <div class="field">
+    <%= f.label :fabricante %><br />
+    <%= f.text_field :fabricante %>
+  </div>
+  <div class="field">
+    <%= f.label :valor %><br />
+    <%= f.text_field :valor %>
+  </div>
+  <div class="field">
+    <%= f.label :quantidade %><br />
+    <%= f.number_field :quantidade %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
