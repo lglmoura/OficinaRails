@@ -11,13 +11,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121010133740) do
+ActiveRecord::Schema.define(:version => 20121010140930) do
 
   create_table "funcaos", :force => true do |t|
     t.string   "nome"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "mecanicos", :force => true do |t|
+    t.string   "matricula"
+    t.string   "nome"
+    t.integer  "funcao_id"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "mecanicos", ["funcao_id"], :name => "index_mecanicos_on_funcao_id"
 
   create_table "pecas", :force => true do |t|
     t.string   "nome"

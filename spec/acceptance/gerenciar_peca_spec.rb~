@@ -43,8 +43,8 @@ feature 'gerenciar peça' do
       fill_in 'Nome',  :with => "vela"
       fill_in 'Descrição',  :with => "Vela de Ignição"
       fill_in 'Fabricante',  :with => "XXX"
-      fill_in 'Valor unitario', with => 3.0
-      fill_in 'Quantidade' , with => 300 	
+      fill_in 'Valor unitario', :with => 3.0
+      fill_in 'Quantidade' , :with => 300 	
    
  
       click_button 'Salvar'

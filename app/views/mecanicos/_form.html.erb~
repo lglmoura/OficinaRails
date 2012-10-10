@@ -1,0 +1,29 @@
+<%= form_for(@mecanico) do |f| %>
+  <% if @mecanico.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mecanico.errors.count, "error") %> prohibited this mecanico from being saved:</h2>
+
+      <ul>
+      <% @mecanico.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :matricula %><br />
+    <%= f.text_field :matricula %>
+  </div>
+  <div class="field">
+    <%= f.label :nome %><br />
+    <%= f.text_field :nome %>
+  </div>
+  <div class="field">
+    <%= f.label :funcao %><br />
+    <%= f.text_field :funcao %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

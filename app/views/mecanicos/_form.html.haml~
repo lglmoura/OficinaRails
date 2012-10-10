@@ -1,0 +1,6 @@
+= semantic_form_for [@mecanico] do |form|
+ 
+  = form.input :matricula, :label => 'Matricula' 
+  = form.input :nome, :label => 'Nome'
+  = form.input :funcao, :member_label => Proc.new { |c| c.funcao.nome }, :label => 'Função' 
+  = form.submit 'Salvar'

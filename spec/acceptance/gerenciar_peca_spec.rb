@@ -4,7 +4,7 @@ require 'spec_helper'
 
 feature 'gerenciar peça' do
 
-  scenario 'incluir peca'  , :js => true  do
+  scenario 'incluir peca' do # , :js => true  do
 
     visit new_peca_path
 
