@@ -17,7 +17,7 @@
     <td><%= mecanico.funcao %></td>
     <td><%= link_to 'Show', mecanico %></td>
     <td><%= link_to 'Edit', edit_mecanico_path(mecanico) %></td>
-    <td><%= link_to 'Excluir', mecanico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Destroy', mecanico, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>

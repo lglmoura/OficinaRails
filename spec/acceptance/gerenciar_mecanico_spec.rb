@@ -16,6 +16,33 @@ feature 'gerenciar mecanico' do
 
   end
 
+  scenario 'alterar mecanico' do #, :javascript => true  do
+
+    funcao = FactoryGirl.create(:funcao, :nome => 'XXX')
+
+    mecanico = FactoryGirl.create(:mecanico,:funcao => funcao)
+
+    visit edit_mecanico_path(mecanico)
+
+    preencher_e_verificar_mecanico
+
+
+  end
+
+  scenario 'excluir mecanico' do #, :javascript => true  do
+
+    funcao = FactoryGirl.create(:funcao, :nome => 'XXX')
+
+    mecanico = FactoryGirl.create(:mecanico,:funcao => funcao)
+
+    visit mecanicos_path
+
+    click_link 'Excluir'
+    
+    
+  end
+
+
 
   def preencher_e_verificar_mecanico
 
