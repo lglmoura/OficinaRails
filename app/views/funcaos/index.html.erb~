@@ -13,7 +13,7 @@
     <td><%= funcao.nome %></td>
     <td><%= link_to 'Show', funcao %></td>
     <td><%= link_to 'Edit', edit_funcao_path(funcao) %></td>
-    <td><%= link_to 'Destroy', funcao, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to 'Excluir', funcao, confirm: 'Confirma exclusão?', method: :delete %></td>
   </tr>
 <% end %>
 </table>
